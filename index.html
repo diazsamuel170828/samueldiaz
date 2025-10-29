@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Diaz Agus Maulana</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1a000f;
+            color: #fff;
+        }
+        header {
+            background: #b3003c;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px #ff0044;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: #330012;
+            padding: 10px;
+        }
+        nav button {
+            background: #ff0044;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        nav button:hover {
+            background: #ff3366;
+        }
+        section {
+            display: none;
+            padding: 25px;
+            text-align: center;
+            animation: fade 0.4s;
+        }
+        .active {
+            display: block;
+        }
+        .card {
+            background: #330012;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            margin: auto;
+            box-shadow: 0 0 25px #ff0044;
+        }
+        @keyframes fade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <header>Sistem Informasi Profil</header><nav>
+    <button onclick="showSection('home')">Beranda</button>
+    <button onclick="showSection('profil')">Profil</button>
+    <button onclick="showSection('kontak')">Kontak</button>
+</nav>
+
+<section id="home" class="active">
+    <div class="card">
+        <h2>Halo! Saya</h2>
+        <h1>Diaz Agus Maulana</h1>
+        <p>Kelas 12 • Jurusan TKJ 01</p>
+    </div>
+</section>
+
+<section id="profil">
+    <div class="card">
+        <h2>Profil Lengkap</h2>
+        <p><b>Nama :</b> Diaz Agus Maulana</p>
+        <p><b>Tempat Lahir :</b> Sukabumi</p>
+        <p><b>Tanggal Lahir :</b> 17 Agustus 2008</p>
+    </div>
+</section>
+
+<section id="kontak">
+    <div class="card">
+        <h2>Kontak</h2>
+        <p>Belum tersedia.</p>
+    </div>
+</section>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
